@@ -4,7 +4,7 @@ Este projeto é um simulador 3D interativo, construído com **VPython**, que mod
 
 $$\vec{F} = q(\vec{v} \times \vec{B})$$
 
-A simulação utiliza o **método do Ponto Médio (Runge-Kutta de 2ª ordem)** para a integração numérica, o que garante uma trajetória estável que conserva a energia, evitando o problema de "espiral da morte" (aumento do raio) comum em simulações que usam o método de Euler simples.
+A simulação utiliza o **método do Ponto Médio** para a integração numérica, o que garante uma trajetória estável que conserva a energia, evitando o problema de "espiral da morte" (aumento do raio) comum em simulações que usam o método de Euler simples.
 
 
 
@@ -82,4 +82,5 @@ Para executar esta simulação no seu computador usando o Visual Studio Code, si
         1.  Calcula a aceleração no tempo $t$.
         2.  Usa essa aceleração para "prever" a velocidade no "ponto médio" do passo ($t + dt/2$).
         3.  Calcula a aceleração *neste ponto médio* (usando a velocidade prevista).
+
         4.  Usa esta aceleração do ponto médio para fazer a atualização final da velocidade e da posição. Este "passo extra" é o que torna o método muito mais estável para movimentos oscilatórios, como este.
